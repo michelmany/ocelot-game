@@ -1,0 +1,134 @@
+.section-contact {
+  background-color: #252c30;
+  padding-top: 100px;
+  padding-bottom: 130px;
+
+  &__container {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    font-size: to-rem(45);
+    color: white;
+    font-weight: 200;
+
+    @include media-breakpoint-up(xxl) {
+      font-size: to-rem(60);
+    }
+  }
+
+  &__subline {
+    color: #fff;
+    opacity: 0.5;
+    font-size: to-rem(16);
+    font-weight: 400;
+
+    @include media-breakpoint-up(md) {
+      font-size: to-rem(18);
+      max-width: 90%;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      font-size: to-rem(22);
+    }
+  }
+
+  &__form {
+    .wpforms-field-label {
+      color: $yellow;
+      text-align: left;
+      text-transform: uppercase !important;
+      font-weight: 400 !important;
+    }
+
+    .wpforms-field-large {
+      border-radius: 0 !important;
+      padding: 22px 15px !important;
+      color: #6b7479 !important;
+    }
+
+    label.wpforms-error {
+      color: red !important;
+      margin-top: 7px !important;
+      text-align: left;
+    }
+
+    .wpforms-one-half {
+      @include media-breakpoint-down(xs) {
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+    }
+
+    .wpforms-submit-container {
+      position: relative;
+      top: -10px;
+      padding-top: 0 !important;
+      background: #263036;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      right: 23px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 24px;
+        background: $card-bg-color;
+        width: calc(100% - 30px);
+        height: 100%;
+      }
+
+      .wpforms-submit {
+        border-radius: 0;
+        border: 0 !important;
+        font-size: to-rem(16) !important;
+        color: black;
+        background: transparent !important;
+        height: to-rem(55);
+        position: relative;
+        z-index: 0;
+        align-items: center;
+        display: inline-flex;
+        padding: 0 to-rem(40) !important;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(xxl) {
+          font-size: to-rem(20) !important;
+        }
+
+        &::before {
+          transition: 0.2s;
+          content: "";
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: $yellow;
+          -ms-transform: skewX(-40deg);
+          -webkit-transform: skewX(-40deg);
+          transform: skewX(-40deg);
+        }
+
+        &:active,
+        &:focus {
+          box-shadow: none !important;
+          color: black;
+        }
+
+        &:hover {
+          &::before {
+            background: white;
+          }
+        }
+      }
+    }
+  }
+}

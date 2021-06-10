@@ -1,0 +1,87 @@
+.hero {
+  background: transparent center / cover no-repeat;
+  height: calc(100vh - 65px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 880px;
+  }
+
+  &--dark {
+    background-color: $grafitti;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 375px;
+    margin-bottom: to-rem(15);
+
+    @include media-breakpoint-up(md) {
+      max-width: 480px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      max-width: 540px;
+    }
+  }
+
+  &__subtitle {
+    color: $yellow;
+    font-size: to-rem(18);
+    font-weight: 400;
+    margin-bottom: to-rem(30);
+
+    @include media-breakpoint-up(xxl) {
+      font-size: to-rem(20);
+      margin-bottom: to-rem(40);
+    }
+  }
+}
+
+.plataforms {
+  @include media-breakpoint-down(xl) {
+    transform: scale(0.8);
+  }
+
+  @include media-breakpoint-down(sm) {
+    transform: scale(0.7);
+  }
+
+  @include media-breakpoint-down(xs) {
+    transform: scale(0.6);
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-of-type) {
+      &::after {
+        content: "";
+        color: white;
+        width: 2px;
+        height: 42px;
+        background: white;
+        opacity: 0.2;
+        display: inline-block;
+      }
+    }
+
+    img {
+      padding: 0 20px;
+    }
+  }
+
+  &__logo {
+    width: 80px;
+    height: 60px;
+  }
+}
