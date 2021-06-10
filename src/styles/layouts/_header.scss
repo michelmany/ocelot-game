@@ -39,7 +39,7 @@
       &::before {
         content: "";
         position: absolute;
-        background-image: url("../images/main-menu-active-icon.png");
+        background-image: url('#{$theme_path}/src/images/main-menu-active-icon.png');
         background-size: contain;
         background-repeat: no-repeat;
         top: -34px;

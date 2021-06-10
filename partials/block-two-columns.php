@@ -18,7 +18,7 @@
                         alt="<?php echo $btc_main_image['alt'] ?>"
                         class="block-two-columns__image">
                         <img
-                            src="@asset('images/welcome-logo-shadow.png')"
+                            src="<?php echo get_template_directory_uri(); ?>/src/images/welcome-logo-shadow.png"
                             class="block-two-columns__image-shadow"
                             alt="Ocelot Logo shadow">
                     </div>
