@@ -1,7 +1,7 @@
 <?php
     $hero_bg_image = get_field('hero_background_image');
     $hero_logo = get_field('hero_logo');
-    $hero_subtitle = get_field('herhero_subtitleo_logo');
+    $hero_subtitle = get_field('hero_subtitle');
     $platforms = get_field('platforms'); 
 ?>
 
