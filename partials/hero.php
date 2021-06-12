@@ -11,7 +11,7 @@
         <h2 class="hero__subtitle"><?php echo $hero_subtitle ?></h2>
         
         <?php if ( ! empty ( $platforms ) ) : ?>
-            <ul class="plataforms list-unstyled d-flex justify-content-center align-items-center">
+            <ul class="platforms list-unstyled d-flex justify-content-center align-items-center">
                 <?php foreach ($platforms as $platform) : ?>
                     <li>
                         <img 

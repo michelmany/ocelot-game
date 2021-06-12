@@ -17,7 +17,7 @@
                                 <p class="service-card__description"><?php echo $card['description'] ?></p>
                                 
                                 <?php if ( ! empty( $platforms ) ) : ?>
-                                    <ul class="plataforms list-unstyled list-unstyled d-flex justify-content-center align-items-center">
+                                    <ul class="platforms list-unstyled list-unstyled d-flex justify-content-center align-items-center">
                                         <?php foreach ($platforms as $platform) : ?>
                                             <li>
                                                 <img 
