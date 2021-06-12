@@ -27,6 +27,8 @@
 
       a {
         color: white;
+        text-decoration: none;
+        letter-spacing: 0.1em;
 
         &:hover {
           color: $yellow;
@@ -45,6 +47,7 @@
   &__copy {
     font-size: to-rem(14);
     opacity: 0.32;
+    margin-bottom: 0;
 
     @include media-breakpoint-up(xxl) {
       font-size: to-rem(16);

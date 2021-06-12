@@ -4,7 +4,9 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>
+        <?php wp_title( '|', true, 'right' ); ?> <?php bloginfo('name'); ?>
+    </title>
 
     <?php wp_head(); ?>
 </head>
@@ -13,14 +15,20 @@
     <header>
         <section class="navbar">
             <div class="container">
-            <a class="navbar__logo-wrapper brand">
-                <img src="@asset('images/ocelot-logo.svg')" alt="{{ get_bloginfo('name', 'display') }}" class="navbar__logo">
+            <a href="<?php echo home_url() ?>" class="navbar__logo-wrapper brand">
+                <?php if ( get_field('main_logo', 'option') ) : ?>
+                    <?php $main_logo = get_field('main_logo', 'option') ?>
+                    <img 
+                        src="<?php echo $main_logo['url'] ?>" 
+                        alt="<?php echo $main_logo['alt'] ?>"
+                        class="navbar__logo">
+                <?php endif ?>
             </a>
             
             <nav class="nav-primary main-menu d-none d-lg-block">
-                @if ( has_nav_menu('primary_navigation') )
-                {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'list-unstyled d-flex']) !!}
-                @endif
+                <?php if ( has_nav_menu('primary_menu') ) :
+                    wp_nav_menu(['theme_location' => 'primary_menu', 'menu_class' => 'list-unstyled d-flex']);
+                endif ?>
             </nav>
 
             <div id="menu-toggle" class="d-lg-none">
@@ -33,9 +41,9 @@
 
         <nav id="menu-mobile" class="d-lg-none">
             <div class="container">
-            @if ( has_nav_menu('primary_navigation') )
-            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'list-unstyled']) !!}
-            @endif
+                <?php if ( has_nav_menu('primary_menu') ) :
+                    wp_nav_menu(['theme_location' => 'primary_menu', 'menu_class' => 'list-unstyled']);
+                endif ?>
             </div>
         </nav>
     </header>
