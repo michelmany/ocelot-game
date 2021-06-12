@@ -2,6 +2,7 @@
   $contact_title = get_field('contact_title');
   $contact_subtitle = get_field('contact_subtitle');
   $form_shortcode = get_field('form_shortcode');
+  $contact_bg_image = get_field('contact_bg_image');
 ?>
 
 <section id="section-contact" class="section-contact text-center">
@@ -14,3 +15,9 @@
       </div>
     </div>
 </section>
+
+<style>
+  .section-contact {
+    background-image: url(<?php echo $contact_bg_image ?>);
+  }
+</style>
