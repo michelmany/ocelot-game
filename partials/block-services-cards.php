@@ -16,9 +16,9 @@
                                 <h3 class="service-card__title text-uppercase"><?php echo $card['title'] ?></h3>
                                 <p class="service-card__description"><?php echo $card['description'] ?></p>
                                 
-                                <?php if ( ! empty( $platforms ) ) : ?>
+                                <?php if ( ! empty( $card['platforms'] ) ) : ?>
                                     <ul class="platforms list-unstyled list-unstyled d-flex justify-content-center align-items-center">
-                                        <?php foreach ($platforms as $platform) : ?>
+                                        <?php foreach ( $card['platforms'] as $platform ) : ?>
                                             <li>
                                                 <img 
                                                     src="<?php echo $platform['logo']['url'] ?>" 
