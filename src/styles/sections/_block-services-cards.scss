@@ -29,11 +29,35 @@ $card-bg-color: #263036;
       padding-bottom: to-rem(10);
       color: #fff;
       background-color: $card-bg-color;
+      position: relative;
 
       @include media-breakpoint-up(xxl) {
         padding: to-rem(55);
       }
     }
+
+    &__text {
+      position: relative;
+      z-index: 15;
+    }
+
+    &__image-wrapper {
+      position: relative;
+      z-index: 10;
+    }
+
+    &__image-shadow {
+      position: absolute;
+      top: 42px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+  
+      @include media-breakpoint-up(md) {
+        display: block;
+        max-width: 500px;
+      }
+    }    
 
     &__image {
       max-width: 204px;
@@ -41,6 +65,7 @@ $card-bg-color: #263036;
       transform: translateX(-50%);
       left: 50%;
       position: relative;
+      z-index: 9;
     }
 
     &__title {

@@ -23,6 +23,8 @@
     width: 100%;
     max-width: 375px;
     margin-bottom: to-rem(15);
+    z-index: 9;
+    position: relative;
 
     @include media-breakpoint-up(md) {
       max-width: 480px;
@@ -30,6 +32,30 @@
 
     @include media-breakpoint-up(xxl) {
       max-width: 540px;
+    }
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &-shadow {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      max-width: 430px;
+  
+      @include media-breakpoint-up(md) {
+        display: block;
+        max-width: 620px;
+        top: -90px;
+      }
+  
+      @include media-breakpoint-up(xxl) {
+        max-width: 772px;
+        top: -156px;
+      }
     }
   }
 

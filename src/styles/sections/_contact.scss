@@ -58,7 +58,7 @@
     }
 
     .wpforms-one-half {
-      @include media-breakpoint-down(xs) {
+      @include media-breakpoint-down(sm) {
         width: 100% !important;
         margin-left: 0 !important;
       }

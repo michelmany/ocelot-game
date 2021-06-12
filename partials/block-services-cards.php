@@ -8,13 +8,23 @@
                     <div class="col-lg-4">
                         <div class="service-card">
                             <div class="service-card__content">
-                                <img
-                                    src="<?php echo $card['image']['url'] ?>" 
-                                    alt="<?php echo $card['image']['alt'] ?>" 
-                                    class="service-card__image">
-                                <p class="ocelot-subtitle"><?php echo $card['subtitle'] ?></p>
-                                <h3 class="service-card__title text-uppercase"><?php echo $card['title'] ?></h3>
-                                <p class="service-card__description"><?php echo $card['description'] ?></p>
+                                <?php if ( ! empty ( $card['image'] ) ) : ?>
+                                    <div class="service-card__image-wrapper">
+                                        <img
+                                            src="<?php echo $card['image']['url'] ?>" 
+                                            alt="<?php echo $card['image']['alt'] ?>" 
+                                            class="service-card__image">
+                                        <img
+                                            src="<?php echo get_template_directory_uri(); ?>/src/images/services-card-shadow.png"
+                                            class="service-card__image-shadow">
+                                    </div>
+                                <?php endif ?>
+
+                                <div class="service-card__text">
+                                    <p class="ocelot-subtitle"><?php echo $card['subtitle'] ?></p>
+                                    <h3 class="service-card__title text-uppercase"><?php echo $card['title'] ?></h3>
+                                    <p class="service-card__description"><?php echo $card['description'] ?></p>
+                                </div>
                                 
                                 <?php if ( ! empty( $card['platforms'] ) ) : ?>
                                     <ul class="platforms list-unstyled list-unstyled d-flex justify-content-center align-items-center">
