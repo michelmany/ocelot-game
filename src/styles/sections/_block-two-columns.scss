@@ -67,11 +67,16 @@
 
   &__title {
     color: #fff;
-    margin-bottom: to-rem(45);
     max-width: 80%;
-    font-size: to-rem(50);
+    font-size: to-rem(40);
     font-weight: 200;
     line-height: 0.85em;
+    margin-bottom: to-rem(35);
+
+    @include media-breakpoint-up(sm) {
+      font-size: to-rem(45);
+      margin-bottom: to-rem(40);
+    }
 
     @include media-breakpoint-up(md) {
       font-size: to-rem(65);

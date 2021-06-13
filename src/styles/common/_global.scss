@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@200;400&display=swap");
 
-@function to-rem($value) {
-  $remValue: math.div($value, 16) + rem;
-
-  @return $remValue;
-}
-
 body {
   font-family: "Exo", sans-serif;
   overflow-x: hidden;
@@ -15,14 +9,11 @@ body {
   color: white;
 }
 
-.section-bg-dark {
-  background-color: $grafitti;
-}
-
 .ocelot-section {
   padding-top: to-rem(20);
   padding-bottom: to-rem(40);
   position: relative;
+  background-color: $grafitti;
 
   @include media-breakpoint-up(md) {
     padding-top: to-rem(40);
@@ -40,11 +31,11 @@ body {
     content: "";
     background-image: url('#{$theme_path}/dist/images/section-vector-01.svg');
     width: 2500px;
-    height: 39px;
+    height: $section-divisor-height;
     display: block;
     background-size: contain;
     background-repeat: no-repeat;
-    top: -38px;
+    top: calc(-#{$section-divisor-height} + 1px);
     left: 50%;
     transform: translateX(-50%);
     background-position: center;
@@ -56,16 +47,25 @@ body {
     content: "";
     background-image: url('#{$theme_path}/dist/images/section-vector-02.svg');
     width: 100%;
-    height: 39px;
+    height: $section-divisor-height;
     display: block;
     background-size: contain;
     background-repeat: no-repeat;
-    bottom: -38px;
+    bottom: calc(-#{$section-divisor-height} + 1px);
     left: 50%;
     transform: translateX(-50%);
     background-position: center;
   }
+
+  &.ocelot-section--internal {
+    &:nth-of-type(even) {
+      background: darken( $grafitti, 6% );
+    }
+  }
 }
+
+
+
 
 .ocelot-subtitle {
   color: $yellow;

@@ -1,0 +1,35 @@
+.internal-header {
+    height: 250px;
+    background: $dark-gray center / cover no-repeat;
+    padding-bottom: $section-divisor-height;
+    display: flex;
+
+    @include media-breakpoint-up(lg) {
+        height: 300px;
+    }    
+
+    @include media-breakpoint-up(xxl) {
+        height: 400px;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    &__headline {
+        font-size: to-rem(32);
+        font-weight: 200;
+        text-transform: uppercase;
+        position: relative;
+        top: 50%;
+        left: 0;
+
+        @include media-breakpoint-up(lg) {
+            font-size: to-rem(45);
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: to-rem(64);
+        }
+    }
+}

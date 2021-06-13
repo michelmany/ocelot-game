@@ -1,9 +1,4 @@
-<?php
-    $hero_bg_image = get_field('hero_background_image');
-    $hero_logo = get_field('hero_logo');
-    $hero_subtitle = get_field('hero_subtitle');
-    $platforms = get_field('platforms'); 
-?>
+<?php extract( $args ) ?>
 
 <section class="hero section-bg-dark">
     <div class="hero__content text-center">
@@ -38,6 +33,6 @@
 
 <style>
     .hero {
-        background-image: url(<?php echo $hero_bg_image ?>);
+        background-image: url(<?php echo $hero_background_image ?>);
     }
 </style>

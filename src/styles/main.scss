@@ -1,13 +1,14 @@
-@use 'sass:math';
-
-/** Import everything from autoload */
 @import "bootstrap/bootstrap";
 
 @import "common/variables";
+@import "common/functions";
 @import "common/global";
+
 @import "layouts/header";
 @import "layouts/footer";
+
 @import "sections/hero";
 @import "sections/block-two-columns";
 @import "sections/block-services-cards";
 @import "sections/contact";
+@import "sections/internal-header";

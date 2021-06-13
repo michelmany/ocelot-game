@@ -1,11 +1,4 @@
-<?php
-    $btc_main_image = get_field('btc_main_image');
-    $btc_subtitle = get_field('btc_subtitle');
-    $btc_title = get_field('btc_title');
-    $btc_copy = get_field('btc_copy');
-    $show_platform_icons = get_field('show_platform_icons');
-    $btc_platforms = get_field('btc_platforms');
-?>
+<?php extract( $args ) ?>
 
 <div class="block-two-columns">
     <div class="container">
