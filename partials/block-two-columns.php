@@ -21,6 +21,19 @@
                 <h4 class="block-two-columns__subtitle text-uppercase"><?php echo $btc_subtitle ?></h4>
                 <h2 class="block-two-columns__title text-uppercase"><?php echo $btc_title ?></h2>
                 <p class="block-two-columns__copy"><?php echo $btc_copy ?></p>
+
+                <?php if ( $show_platform_icons && ! empty( $btc_platforms ) ) : ?>
+                    <ul class="platforms list-unstyled d-flex align-items-center">
+                        <?php foreach ( $btc_platforms as $platform ) : ?>
+                            <li>
+                                <img 
+                                    src="<?php echo $platform['logo']['url'] ?>" 
+                                    alt="<?php echo $platform['logo']['alt'] ?>" 
+                                    class="platforms__logo">
+                            </li>
+                        <?php endforeach ?>
+                    </ul>
+                <?php endif ?>
             </div>
         </div>
     </div>

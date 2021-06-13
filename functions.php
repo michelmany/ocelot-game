@@ -19,10 +19,10 @@ if ( !class_exists('acf_pro') ) :
     }
 
     // (Optional) Hide the ACF admin menu item.
-    add_filter('acf/settings/show_admin', 'my_acf_settings_show_admin');
-    function my_acf_settings_show_admin( $show_admin ) {
-        return false;
-    }
+    // add_filter('acf/settings/show_admin', 'my_acf_settings_show_admin');
+    // function my_acf_settings_show_admin( $show_admin ) {
+    //     return false;
+    // }
 
 endif;
 

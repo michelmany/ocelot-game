@@ -40,7 +40,9 @@
                                 <?php endif ?>
                             </div>
                             <div class="service-card__btn-wrapper">
-                                <a href="#" class="service-card__button btn">Read More</a>
+                                <a href="<?php echo $card['cta_button']['url'] ?>" class="service-card__button btn">
+									<?php echo $card['cta_button']['title'] ?>
+								</a>
                             </div>
                         </div>
                     </div>

@@ -71,36 +71,3 @@
     }
   }
 }
-
-.platforms {
-  transform: scale(0.6);
-  
-  @include media-breakpoint-up(md) {
-    transform: scale(0.7);
-  }
-  
-  @include media-breakpoint-up(xxl) {
-    transform: scale(0.8);
-  }
-
-  li {
-    display: flex;
-    align-items: center;
-
-    &:not(:last-of-type) {
-      &::after {
-        content: "";
-        color: white;
-        width: 2px;
-        height: 42px;
-        background: white;
-        opacity: 0.2;
-        display: inline-block;
-      }
-    }
-
-    img {
-      padding: 0 20px;
-    }
-  }
-}

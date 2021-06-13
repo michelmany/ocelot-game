@@ -102,4 +102,12 @@
       font-size: to-rem(22);
     }
   }
+
+  .platforms {
+    transform-origin: left;
+    opacity: 0.3;
+    margin-top: 25px;
+    position: relative;
+    left: -25px;
+  }
 }
