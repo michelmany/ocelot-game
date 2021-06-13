@@ -12,7 +12,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-    <header>
+    <header class="page-header">
         <section class="navbar">
             <div class="container">
             <a href="<?php echo home_url() ?>" class="navbar__logo-wrapper brand">
