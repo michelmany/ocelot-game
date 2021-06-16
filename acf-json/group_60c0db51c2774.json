@@ -154,6 +154,25 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_60ca4aacdb34d",
+            "label": "Anchor ID",
+            "name": "btc_anchor_id",
+            "type": "text",
+            "instructions": "Use this anchor id to link a button to this section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -175,5 +194,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1623868823
+    "modified": 1623871264
 }

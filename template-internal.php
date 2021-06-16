@@ -5,22 +5,25 @@
 
 get_header();
 
-// $default_section = get_fields('default_section');
 $data = get_fields( get_the_ID() );
 
-// var_dump($data);
-
-get_template_part('partials/internal', 'header', $data); 
-?>
+get_template_part('partials/internal', 'header', $data); ?>
 
 <?php if ( ! empty ( $data['default_section'] ) ) : ?>
-    <?php foreach ( $data['default_section'] as $section ) : ?>
-        <section class="ocelot-section section-bg-dark ocelot-section--internal">
+    <?php foreach ( $data['default_section'] as $key => $section ) : ?>
+
+        <?php $section_id = !empty( $section['btc_anchor_id'] ) 
+            ? slugify( $section['btc_anchor_id'] ) 
+            : slugify( $section['btc_title'] ) . "-" . $key ?>
+
+        <section 
+            id="<?php echo $section_id ?>"
+            class="ocelot-section section-bg-dark ocelot-section--internal">
             <?php get_template_part('partials/block', 'two-columns', $section) ?>
         </section>
+
     <?php endforeach ?>
 <?php endif ?>
-
 
 <?php 
 get_template_part('partials/section-contact');
