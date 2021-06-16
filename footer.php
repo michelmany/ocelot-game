@@ -14,7 +14,9 @@
                 endif ?>            
             </nav>
 
-            <p class="ocelot-footer__copy"><?php echo get_field('site_info', 'option') ?></p>
+            <p class="ocelot-footer__copy">
+                <?php echo get_field('site_info', 'option') ?>
+            </p>
         </div>
     </footer>
 
