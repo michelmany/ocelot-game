@@ -159,9 +159,9 @@
     "location": [
         [
             {
-                "param": "page_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "front_page"
+                "value": "template-homepage.php"
             }
         ]
     ],
@@ -175,5 +175,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1623524832
+    "modified": 1623868823
 }

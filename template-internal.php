@@ -1,4 +1,7 @@
 <?php
+/**
+ * Template Name: Internal Pages Template
+ */
 
 get_header();
 

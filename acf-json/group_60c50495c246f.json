@@ -48,9 +48,9 @@
     "location": [
         [
             {
-                "param": "page",
-                "operator": "!=",
-                "value": "10"
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-internal.php"
             }
         ]
     ],
@@ -64,5 +64,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1623569752
+    "modified": 1623868957
 }

@@ -168,9 +168,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "10"
+                "value": "template-homepage.php"
             }
         ]
     ],
@@ -184,5 +184,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1623305693
+    "modified": 1623868841
 }
