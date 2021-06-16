@@ -14,7 +14,7 @@
                 endif ?>            
             </nav>
 
-            <p class="ocelot-footer__copy">© All Rights Reserved Ocelot 2021 <br> Site Design & Branding by Fully Illustrated Ltd <br> Developed by Michel Moraes</p>
+            <p class="ocelot-footer__copy"><?php echo get_field('site_info', 'option') ?></p>
         </div>
     </footer>
 
