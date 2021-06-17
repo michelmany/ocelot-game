@@ -13,8 +13,8 @@ get_template_part('partials/internal', 'header', $data); ?>
     <?php foreach ( $data['default_section'] as $key => $section ) : ?>
 
         <?php $section_id = !empty( $section['btc_anchor_id'] ) 
-            ? slugify( $section['btc_anchor_id'] ) 
-            : slugify( $section['btc_title'] ) . "-" . $key ?>
+            ? $section['btc_anchor_id'] 
+            : sanitize_title( $section['btc_title'] ) . "-" . $key ?>
 
         <section 
             id="<?php echo $section_id ?>"
@@ -28,4 +28,3 @@ get_template_part('partials/internal', 'header', $data); ?>
 <?php 
 get_template_part('partials/section-contact');
 get_footer();
-
