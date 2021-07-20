@@ -46,30 +46,36 @@ body {
   }
 
   &::after {
-    background: transparent;
-    position: absolute;
     content: "";
-    background-image: url('#{$theme_path}/dist/images/section-vector-02.svg');
+    mask-image: url('#{$theme_path}/dist/images/section-vector-02.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    position: absolute;
+    display: block;
+    background-color: $grafitti;
     width: 100%;
     height: $section-divisor-height;
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
     bottom: calc(-#{$section-divisor-height} + 1px);
     left: 50%;
     transform: translateX(-50%);
-    background-position: center;
+    z-index: 9;
   }
 
   &.ocelot-section--internal {
     &:nth-of-type(even) {
       background: darken( $grafitti, 6% );
     }
+
+    &:nth-last-of-type(2) {
+      &:nth-of-type(even) {
+        &::after {
+          background-color: darken( $grafitti, 6% );
+        }
+      }
+    }
   }
 }
-
-
-
 
 .ocelot-subtitle {
   color: $yellow;
